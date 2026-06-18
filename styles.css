@@ -32,3 +32,203 @@
 /* Шрифтовая система шаблона WedWed: Playfair для заголовков, Manrope для текста. */
 h1,h2,h3,.script,.hero-date,.calendar h3,.quote p,.gallery-title span,.gallery-title h2,.place>span,.schedule-item time,footer p,footer h2{font-family:Playfair,"Playfair Display",Georgia,serif}
 body,input,textarea,button{font-family:Manrope,Arial,sans-serif}
+
+/* =========================================================
+   ФИНАЛЬНАЯ ТИПОГРАФИКА
+   Тонкий свадебный serif + лёгкий современный текст.
+   Заголовки крупнее текста, жирные начертания отключены.
+   ========================================================= */
+
+:root{
+  --display-font: "Forum", "Times New Roman", Georgia, serif;
+  --text-font: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+}
+
+body,
+input,
+textarea,
+button,
+select,
+label,
+legend,
+.form-note,
+.place-type,
+.count-grid span,
+.week b,
+.days span,
+.contact-copy>a span{
+  font-family: var(--text-font) !important;
+  font-weight: 300 !important;
+}
+
+h1,
+h2,
+h3,
+.script,
+.hero-date,
+.hero-date em,
+.calendar h3,
+.calendar h3 i,
+.quote p,
+.quote i,
+.gallery-title span,
+.gallery-title h2,
+.place>span,
+.schedule-item time,
+footer p,
+footer h2,
+.intro-content p,
+.intro-content h1,
+.section-copy .script,
+.date-heading p,
+.locations-head p,
+.rsvp-head p,
+.contact-copy>p,
+.schedule-head p{
+  font-family: var(--display-font) !important;
+  font-weight: 400 !important;
+}
+
+b,
+strong,
+.week b,
+.count-grid b,
+.days .active{
+  font-weight: 400 !important;
+}
+
+.intro-content p{
+  font-size: clamp(28px, 5vw, 54px) !important;
+  line-height: 1 !important;
+  letter-spacing: 0 !important;
+}
+
+.intro-content h1{
+  font-size: clamp(54px, 11vw, 112px) !important;
+  line-height: .86 !important;
+  letter-spacing: -.02em !important;
+}
+
+.hero .eyebrow{
+  font-family: var(--text-font) !important;
+  font-size: 11px !important;
+  font-style: normal !important;
+  font-weight: 300 !important;
+  text-transform: uppercase !important;
+  letter-spacing: .24em !important;
+}
+
+.hero h1{
+  font-family: var(--display-font) !important;
+  font-size: clamp(68px, 9vw, 128px) !important;
+  line-height: .82 !important;
+  letter-spacing: -.035em !important;
+  font-weight: 400 !important;
+}
+
+.hero h1 i{
+  font-weight: 400 !important;
+  font-size: .72em !important;
+}
+
+.section-copy .script,
+.date-heading p,
+.locations-head p,
+.rsvp-head p,
+.contact-copy>p,
+.schedule-head p{
+  font-size: clamp(74px, 9vw, 132px) !important;
+  line-height: .82 !important;
+  letter-spacing: -.04em !important;
+  font-style: normal !important;
+}
+
+.section-copy h2,
+.date-heading h2,
+.locations-head h2,
+.rsvp-head h2,
+.contact-copy h2,
+.schedule-head h2{
+  font-family: var(--display-font) !important;
+  font-size: clamp(44px, 6vw, 86px) !important;
+  line-height: .92 !important;
+  letter-spacing: -.025em !important;
+  font-weight: 400 !important;
+}
+
+.place h3,
+.schedule-item h3,
+.calendar h3{
+  font-family: var(--display-font) !important;
+  font-size: clamp(38px, 5vw, 72px) !important;
+  line-height: .95 !important;
+  letter-spacing: -.025em !important;
+  font-weight: 400 !important;
+}
+
+p,
+.section-copy>p:last-child,
+.schedule-item p,
+.place p,
+.date-heading span,
+.rsvp-head span{
+  font-family: var(--text-font) !important;
+  font-size: clamp(15px, 1.5vw, 17px) !important;
+  line-height: 1.8 !important;
+  font-weight: 300 !important;
+}
+
+.hero-date{
+  font-size: clamp(38px, 5vw, 56px) !important;
+}
+
+.hero-date em{
+  font-size: clamp(17px, 2vw, 22px) !important;
+}
+
+.count-grid b{
+  font-family: var(--display-font) !important;
+  font-size: clamp(52px, 8vw, 110px) !important;
+  font-weight: 400 !important;
+}
+
+.intro button,
+.rsvp button,
+.sticky-rsvp,
+.music-toggle,
+.place a{
+  font-family: var(--text-font) !important;
+  font-weight: 300 !important;
+}
+
+@media(max-width:760px){
+  .hero h1{
+    font-size: 64px !important;
+    line-height: .76 !important;
+  }
+
+  .section-copy .script,
+  .date-heading p,
+  .locations-head p,
+  .rsvp-head p,
+  .contact-copy>p,
+  .schedule-head p{
+    font-size: 76px !important;
+    line-height: .84 !important;
+  }
+
+  .section-copy h2,
+  .date-heading h2,
+  .locations-head h2,
+  .rsvp-head h2,
+  .contact-copy h2,
+  .schedule-head h2{
+    font-size: 48px !important;
+    line-height: .92 !important;
+  }
+
+  .place h3,
+  .schedule-item h3{
+    font-size: 38px !important;
+  }
+}
