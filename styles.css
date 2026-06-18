@@ -75,3 +75,30 @@ footer p{
 body,p,label,input,textarea,button,a,span,legend{
  font-weight:300 !important;
 }
+
+
+/* BIGGER AGRETTA OVERRIDE */
+.hero h1{
+ font-size: clamp(95px, 13vw, 190px) !important;
+}
+.section-copy .script,
+.date-heading p,
+.locations-head p,
+.rsvp-head p,
+.contact-copy > p,
+.schedule-head p{
+ font-size: clamp(105px, 12vw, 180px) !important;
+}
+.section-copy h2,
+.date-heading h2,
+.locations-head h2,
+.rsvp-head h2,
+.contact-copy h2,
+.schedule-head h2{
+ font-size: clamp(62px, 8vw, 120px) !important;
+}
+.place h3,
+.schedule-item h3,
+.calendar h3{
+ font-size: clamp(52px, 6vw, 92px) !important;
+}
