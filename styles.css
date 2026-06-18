@@ -34,187 +34,229 @@ h1,h2,h3,.script,.hero-date,.calendar h3,.quote p,.gallery-title span,.gallery-t
 body,input,textarea,button{font-family:Manrope,Arial,sans-serif}
 
 /* =========================================================
-   ФИНАЛЬНАЯ ТИПОГРАФИКА
-   Тонкий свадебный serif + лёгкий современный текст.
-   Заголовки крупнее текста, жирные начертания отключены.
+   ESKAL FONT OVERRIDE
+   Все шрифты приглашения заменены на Eskal.
+   Файл шрифта должен лежать в: assets/ofont.ru_Eskal.ttf
    ========================================================= */
 
-:root{
-  --display-font: "Forum", "Times New Roman", Georgia, serif;
-  --text-font: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+@font-face {
+  font-family: "Eskal";
+  src: url("assets/ofont.ru_Eskal.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
+:root {
+  --font-main: "Eskal", Georgia, "Times New Roman", serif;
+}
+
+/* Полная замена шрифта на всём сайте */
+html,
 body,
+body *,
 input,
 textarea,
 button,
 select,
+option,
 label,
 legend,
-.form-note,
-.place-type,
-.count-grid span,
-.week b,
-.days span,
-.contact-copy>a span{
-  font-family: var(--text-font) !important;
-  font-weight: 300 !important;
-}
-
+a,
+p,
+span,
+b,
+strong,
+i,
+em,
 h1,
 h2,
 h3,
 .script,
+.intro-content p,
+.intro-content h1,
+.hero .eyebrow,
+.hero h1,
+.hero h1 i,
 .hero-date,
 .hero-date em,
+.section-copy .script,
+.section-copy h2,
+.date-heading p,
+.date-heading h2,
+.locations-head p,
+.locations-head h2,
+.rsvp-head p,
+.rsvp-head h2,
+.contact-copy > p,
+.contact-copy h2,
+.schedule-head p,
+.schedule-head h2,
 .calendar h3,
 .calendar h3 i,
 .quote p,
 .quote i,
 .gallery-title span,
 .gallery-title h2,
-.place>span,
+.place > span,
+.place h3,
 .schedule-item time,
+.schedule-item span,
+.schedule-item h3,
 footer p,
 footer h2,
-.intro-content p,
-.intro-content h1,
-.section-copy .script,
-.date-heading p,
-.locations-head p,
-.rsvp-head p,
-.contact-copy>p,
-.schedule-head p{
-  font-family: var(--display-font) !important;
+.count-grid b,
+.count-grid span,
+.contact-copy > a,
+.contact-copy > a span,
+.form-note,
+.sticky-rsvp,
+.music-toggle {
+  font-family: var(--font-main) !important;
   font-weight: 400 !important;
 }
 
+/* Убираем визуальную жирность */
 b,
 strong,
 .week b,
+.days .active,
 .count-grid b,
-.days .active{
+.rsvp button,
+.intro button {
   font-weight: 400 !important;
 }
 
-.intro-content p{
-  font-size: clamp(28px, 5vw, 54px) !important;
+/* Логичная иерархия: заголовки крупнее обычного текста */
+.intro-content p {
+  font-size: clamp(32px, 5vw, 58px) !important;
   line-height: 1 !important;
   letter-spacing: 0 !important;
 }
 
-.intro-content h1{
-  font-size: clamp(54px, 11vw, 112px) !important;
-  line-height: .86 !important;
-  letter-spacing: -.02em !important;
+.intro-content h1 {
+  font-size: clamp(58px, 11vw, 118px) !important;
+  line-height: .9 !important;
+  letter-spacing: -.015em !important;
 }
 
-.hero .eyebrow{
-  font-family: var(--text-font) !important;
-  font-size: 11px !important;
+.hero .eyebrow {
+  font-size: clamp(18px, 2.2vw, 28px) !important;
   font-style: normal !important;
-  font-weight: 300 !important;
-  text-transform: uppercase !important;
-  letter-spacing: .24em !important;
+  text-transform: lowercase !important;
+  letter-spacing: .08em !important;
 }
 
-.hero h1{
-  font-family: var(--display-font) !important;
-  font-size: clamp(68px, 9vw, 128px) !important;
+.hero h1 {
+  font-size: clamp(72px, 10vw, 145px) !important;
   line-height: .82 !important;
-  letter-spacing: -.035em !important;
-  font-weight: 400 !important;
+  letter-spacing: -.025em !important;
 }
 
-.hero h1 i{
-  font-weight: 400 !important;
-  font-size: .72em !important;
+.hero h1 i {
+  font-size: .75em !important;
+  font-style: normal !important;
 }
 
+.hero-date {
+  font-size: clamp(42px, 5.5vw, 64px) !important;
+}
+
+.hero-date em {
+  font-size: clamp(20px, 2.4vw, 28px) !important;
+}
+
+/* Большие декоративные заголовки разделов */
 .section-copy .script,
 .date-heading p,
 .locations-head p,
 .rsvp-head p,
-.contact-copy>p,
-.schedule-head p{
-  font-size: clamp(74px, 9vw, 132px) !important;
-  line-height: .82 !important;
-  letter-spacing: -.04em !important;
+.contact-copy > p,
+.schedule-head p {
+  font-size: clamp(76px, 9vw, 136px) !important;
+  line-height: .86 !important;
+  letter-spacing: -.025em !important;
   font-style: normal !important;
 }
 
+/* Главные заголовки разделов */
 .section-copy h2,
 .date-heading h2,
 .locations-head h2,
 .rsvp-head h2,
 .contact-copy h2,
-.schedule-head h2{
-  font-family: var(--display-font) !important;
-  font-size: clamp(44px, 6vw, 86px) !important;
-  line-height: .92 !important;
-  letter-spacing: -.025em !important;
-  font-weight: 400 !important;
+.schedule-head h2 {
+  font-size: clamp(46px, 6vw, 90px) !important;
+  line-height: .95 !important;
+  letter-spacing: -.018em !important;
 }
 
+/* Заголовки внутри блоков */
 .place h3,
 .schedule-item h3,
-.calendar h3{
-  font-family: var(--display-font) !important;
-  font-size: clamp(38px, 5vw, 72px) !important;
+.calendar h3 {
+  font-size: clamp(42px, 5.3vw, 78px) !important;
   line-height: .95 !important;
-  letter-spacing: -.025em !important;
-  font-weight: 400 !important;
+  letter-spacing: -.018em !important;
 }
 
+.gallery-title h2,
+.quote p {
+  font-size: clamp(82px, 12vw, 170px) !important;
+  line-height: .72 !important;
+}
+
+/* Обычный текст — заметно меньше заголовков */
 p,
-.section-copy>p:last-child,
+.section-copy > p:last-child,
 .schedule-item p,
 .place p,
 .date-heading span,
-.rsvp-head span{
-  font-family: var(--text-font) !important;
-  font-size: clamp(15px, 1.5vw, 17px) !important;
-  line-height: 1.8 !important;
-  font-weight: 300 !important;
+.rsvp-head span,
+label,
+legend,
+input,
+textarea {
+  font-size: clamp(17px, 1.7vw, 22px) !important;
+  line-height: 1.65 !important;
+  letter-spacing: 0 !important;
 }
 
-.hero-date{
-  font-size: clamp(38px, 5vw, 56px) !important;
-}
-
-.hero-date em{
-  font-size: clamp(17px, 2vw, 22px) !important;
-}
-
-.count-grid b{
-  font-family: var(--display-font) !important;
-  font-size: clamp(52px, 8vw, 110px) !important;
-  font-weight: 400 !important;
-}
-
-.intro button,
-.rsvp button,
+/* Мелкие подписи */
+.place-type,
+.schedule-item span,
+.count-grid span,
+.form-note,
 .sticky-rsvp,
 .music-toggle,
-.place a{
-  font-family: var(--text-font) !important;
-  font-weight: 300 !important;
+.place a,
+.intro button,
+.rsvp button {
+  font-size: clamp(13px, 1.15vw, 16px) !important;
+  letter-spacing: .08em !important;
 }
 
-@media(max-width:760px){
-  .hero h1{
-    font-size: 64px !important;
-    line-height: .76 !important;
+/* Таймер */
+.count-grid b {
+  font-size: clamp(58px, 8vw, 112px) !important;
+  line-height: .95 !important;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 760px) {
+  .hero h1 {
+    font-size: 72px !important;
+    line-height: .78 !important;
   }
 
   .section-copy .script,
   .date-heading p,
   .locations-head p,
   .rsvp-head p,
-  .contact-copy>p,
-  .schedule-head p{
-    font-size: 76px !important;
-    line-height: .84 !important;
+  .contact-copy > p,
+  .schedule-head p {
+    font-size: 80px !important;
+    line-height: .86 !important;
   }
 
   .section-copy h2,
@@ -222,13 +264,26 @@ p,
   .locations-head h2,
   .rsvp-head h2,
   .contact-copy h2,
-  .schedule-head h2{
-    font-size: 48px !important;
-    line-height: .92 !important;
+  .schedule-head h2 {
+    font-size: 52px !important;
+    line-height: .95 !important;
   }
 
   .place h3,
-  .schedule-item h3{
-    font-size: 38px !important;
+  .schedule-item h3 {
+    font-size: 44px !important;
+  }
+
+  p,
+  .section-copy > p:last-child,
+  .schedule-item p,
+  .place p,
+  .date-heading span,
+  .rsvp-head span,
+  label,
+  legend,
+  input,
+  textarea {
+    font-size: 18px !important;
   }
 }
