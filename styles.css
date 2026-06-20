@@ -33,72 +33,8 @@
 h1,h2,h3,.script,.hero-date,.calendar h3,.quote p,.gallery-title span,.gallery-title h2,.place>span,.schedule-item time,footer p,footer h2{font-family:Playfair,"Playfair Display",Georgia,serif}
 body,input,textarea,button{font-family:Manrope,Arial,sans-serif}
 
-
-
-/* AGRETTA HILLS FONT */
-@font-face{
- font-family:"AgrettaHills";
- src:url("assets/Ira-Dvilyuk-Agretta-Hills-Cyrillic-Script.ttf") format("truetype");
- font-display:swap;
-}
-
-.hero h1,
-.hero h1 i,
-.section-copy .script,
-.date-heading p,
-.locations-head p,
-.rsvp-head p,
-.contact-copy>p,
-.schedule-head p,
-.quote p,
-.gallery-title h2,
-.gallery-title span,
-footer h2,
-footer p{
- font-family:"AgrettaHills" !important;
- font-weight:400 !important;
-}
-
-.section-copy h2,
-.date-heading h2,
-.locations-head h2,
-.rsvp-head h2,
-.contact-copy h2,
-.schedule-head h2,
-.place h3,
-.schedule-item h3,
-.calendar h3{
- font-family:"AgrettaHills" !important;
- font-weight:400 !important;
-}
-
-body,p,label,input,textarea,button,a,span,legend{
- font-weight:300 !important;
-}
-
-
-/* BIGGER AGRETTA OVERRIDE */
-.hero h1{
- font-size: clamp(95px, 13vw, 190px) !important;
-}
-.section-copy .script,
-.date-heading p,
-.locations-head p,
-.rsvp-head p,
-.contact-copy > p,
-.schedule-head p{
- font-size: clamp(105px, 12vw, 180px) !important;
-}
-.section-copy h2,
-.date-heading h2,
-.locations-head h2,
-.rsvp-head h2,
-.contact-copy h2,
-.schedule-head h2{
- font-size: clamp(62px, 8vw, 120px) !important;
-}
-.place h3,
-.schedule-item h3,
-.calendar h3{
- font-size: clamp(52px, 6vw, 92px) !important;
-}
+/* Локальный шрифт Classica Two: не зависит от Google Fonts или WedWed. */
+@font-face{font-family:"Classica Two";src:url("assets/classica-two.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
+.hero h1,.intro-content h1,.section-copy .script,.date-heading p,.locations-head p,.rsvp-head p,.contact-copy>p,.schedule-head p,.quote p,.gallery-title span,.gallery-title h2,footer p,footer h2{font-family:"Classica Two",cursive;font-style:normal;font-weight:400}
+.section-copy h2,.date-heading h2,.locations-head h2,.rsvp-head h2,.contact-copy h2,.schedule-head h2{font-family:"Classica Two",cursive;font-weight:400}
+/* font-update-classica-v5 */
